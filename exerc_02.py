@@ -1,5 +1,5 @@
 
-# Exerc. 01) a)
+# Exerc. 02)
 
 
 import matplotlib.pyplot as plt
@@ -10,8 +10,8 @@ SIZE_X = 1200
 SIZE_Y = 100
 
 
-x = np.random.rand(SIZE_X) 
-x = x - 0.5 
+x = np.random.rand(SIZE_X)
+x = x - 0.5
 
 #x = np.arange(SIZE_X)
 y = np.array([])
@@ -29,6 +29,7 @@ while len(y) < SIZE_Y:
 		i = i + 1
 
 	y = np.append(y, sum_values)
+
 
 
 print("\nvalues of x: ")
