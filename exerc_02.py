@@ -13,6 +13,8 @@ SIZE_Y = 100
 x = np.random.rand(SIZE_X)
 x = x - 0.5
 
+#x.clip(-6,6)
+
 #x = np.arange(SIZE_X)
 y = np.array([])
 

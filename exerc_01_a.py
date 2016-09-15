@@ -14,6 +14,4 @@ print(x)
 
 plt.hist(x)
 
-#a.clip(0,5)
-
 plt.show()
