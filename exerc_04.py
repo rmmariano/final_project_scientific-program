@@ -103,7 +103,7 @@ yi=2
 
 ##########################
 
-y = np.arange(5)
+y = np.arange(15)
 
 
 ESTIMATIVAS = 5
@@ -122,13 +122,29 @@ for e in range(ESTIMATIVAS):
 
 
 for e in range(ESTIMATIVAS):
-    # ultima posicao do array
     N = len(y_m2) - 1
 
-    proximo = sum(y_m2[:(N)]) / N
+    proximo = sum(y_m2[:N]) / N
 
     y_m2 = np.append(y_m2, proximo)
 
+# 1 ... 12
+w = np.arange(12) + 1
+# inverte array
+w = w[::-1]
+
+for e in range(ESTIMATIVAS):
+    N = len(y_m3) - 1
+
+    pos = len(y_m3) - 12
+
+    ultimos = y_m3[:pos]
+
+    proximo = sum(ultimos * w) / 72
+
+    #proximo = sum(y_m3[:N]) / 72
+
+    y_m3 = np.append(y_m3, proximo)
 
 
 print("\n\nValores y originais: " + str( list(y) ) )
@@ -136,6 +152,8 @@ print("\n\nValores y originais: " + str( list(y) ) )
 print("\nValores y com estimativa 1: " + str( list(y_m1) ) )
 
 print("\nValores y com estimativa 2: " + str( list(y_m2) ) )
+
+print("\nValores y com estimativa 3: " + str( list(y_m3) ) )
 
 
 
