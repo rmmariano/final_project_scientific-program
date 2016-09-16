@@ -3,6 +3,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+'''
 SIZE_X = 1200
 SIZE_Y = 100
 
@@ -23,7 +24,7 @@ while len(y) < SIZE_Y:
 
 	y = np.append(y, sum_values)
 
-'''
+"""
 print("\nvalues of x: ")
 print(x)
 print("\nvalues of y: ")
@@ -32,7 +33,7 @@ print(y)
 plt.hist(y)
 
 plt.show()
-'''
+"""
 
 # Exerc. 03)
 
@@ -64,7 +65,8 @@ while len(z) < SIZE_Z:
     z = np.append(z, somatorio)
 
 
-'''
+
+"""
 print("\nvalues of x: ")
 print(x)
 print("\nvalues of z: ")
@@ -73,7 +75,7 @@ print(z)
 plt.hist(z)
 
 plt.show()
-'''
+"""
 
 # Exerc. 4)
 
@@ -94,6 +96,51 @@ yi=2
     m3[yi]=sum(12*y[:yi-1]+11*y[:yi-2])/72
 
     print(yi)
+
+'''
+
+
+
+##########################
+
+y = np.arange(5)
+
+
+ESTIMATIVAS = 5
+
+
+y_m1 = np.copy(y)
+y_m2 = np.copy(y)
+y_m3 = np.copy(y)
+
+
+for e in range(ESTIMATIVAS):
+    # ultima posicao do array
+    N = len(y_m1) - 1
+    # o proximo valor do array sera o valor da posicao corrente
+    y_m1 = np.append(y_m1, y_m1[N])
+
+
+for e in range(ESTIMATIVAS):
+    # ultima posicao do array
+    N = len(y_m2) - 1
+
+    proximo = sum(y_m2[:(N)]) / N
+
+    y_m2 = np.append(y_m2, proximo)
+
+
+
+print("\n\nValores y originais: " + str( list(y) ) )
+
+print("\nValores y com estimativa 1: " + str( list(y_m1) ) )
+
+print("\nValores y com estimativa 2: " + str( list(y_m2) ) )
+
+
+
+
+
 
 
 
